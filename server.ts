@@ -647,6 +647,11 @@ async function startServer() {
   });
 }
 
-startServer().catch((err) => {
-  console.error("Critical: Failed to boot express server instance:", err);
-});
+// Only start the standalone express server if NOT running in serverless / Netlify environment
+if (!process.env.NETLIFY && !process.env.LAMBDA_TASK_ROOT) {
+  startServer().catch((err) => {
+    console.error("Critical: Failed to boot express server instance:", err);
+  });
+}
+
+export { app };
