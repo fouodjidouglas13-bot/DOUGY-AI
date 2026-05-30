@@ -1,0 +1,6 @@
+{
+  "name": "DOUGY AI",
+  "description": "A powerful full-stack assistant that conducts deep web-grounded research, compiles cited findings, and automates cohesive report generation.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
